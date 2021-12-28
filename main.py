@@ -57,9 +57,9 @@ def respond(voice_data):
     # 2: name
     if there_exists(["what is your name","what's your name","tell me your name"]):
         if person_obj.name:
-            speak("my name is Alexis")
+            speak("my name is John")
         else:
-            speak("my name is Alexis. what's your name?")
+            speak("my name is John. what's your name?")
 
     if there_exists(["my name is"]):
         person_name = voice_data.split("is")[-1].strip()
@@ -84,9 +84,9 @@ def respond(voice_data):
     # 5: search google
     if there_exists(["search for"]) and 'youtube' not in voice_data:
         search_term = voice_data.split("for")[-1]
-        url = f"https://google.com/search?q={search_term}"
+        url = f"https://squirrelcom.github.io/seARch/seARch.html?q={search_term}"
         webbrowser.get().open(url)
-        speak(f'Here is what I found for {search_term} on google')
+        speak(f'Here is what I found for {search_term} on seARch!')
 
     # 6: search youtube
     if there_exists(["youtube"]):
